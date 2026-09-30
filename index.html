@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neelam Chandwani - Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: beige;
+      color: #4B3621;
+      line-height: 1.6;
+      max-width: 950px;
+      margin: auto;
+      padding: 20px;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFF8ED;
+      padding: 16px 24px;
+      border: 1px solid #D8BFA0;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(75, 54, 33, 0.15);
+      position: relative;
+    }
+
+    nav strong {
+      color: #5C4033;
+      font-size: 21px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #70543D;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #3F2A1D;
+    }
+
+    section {
+      margin-top: 28px;
+      padding: 32px;
+      background: #FFF8ED;
+      border: 1px solid #D8BFA0;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(75, 54, 33, 0.13);
+    }
+
+    #hero {
+      text-align: center;
+      padding: 65px 35px;
+      background: linear-gradient(135deg, #F2DFC4, #E5CBA9, #FFF3DF);
+    }
+
+    #hero h1 {
+      font-size: 52px;
+      color: #4B3021;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+
+    #hero h3 {
+      color: #795538;
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    #hero p {
+      max-width: 620px;
+      margin: auto;
+      color: #654B37;
+      font-size: 16px;
+    }
+
+    h2 {
+      color: #5C4033;
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+    
+    h3 {
+      color: #795538;
+    }
+
+    p {
+      color: #6B513B;
+      font-size: 15px;
+      margin: 8px 0;
+    }
+
+    strong {
+      color: #4B3621;
+    }
+
+    #skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+    }
+
+    #skills li {
+      background: #E8D2B4;
+      color: #5C4033;
+      padding: 9px 18px;
+      border-radius: 50x;
+      border: 1px solid #D0B18C;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    #skills li:hover {
+      background: #D9BD99;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 12px rgba(75, 54, 33, 0.12);
+    }
+
+    #projects ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      list-style: none;
+      padding: 0;
+    }
+
+    #projects li {
+      background: #F7EBDD;
+      padding: 22px;
+      min-height: 160px;
+      border-radius: 18px;
+      border: 1px solid #DEC5A7;
+      color: #6B513B;
+      transition: 0.3s;
+    }
+
+    #projects li:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(75, 54, 33, 0.15);
+    }
+
+    #projects li strong {
+      display: block;
+      color: #5C4033;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .button1 {
+      margin-top: 28px;
+    }
+
+    .button2 {
+      display: inline-block;
+      padding: 11px 22px;
+      border-radius: 50px;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .button-primary {
+      background: #6F4E37;
+      color: #FFF8ED;
+      border: 1px solid #6F4E37;
+      box-shadow:
+        0 6px 15px rgba(75, 54, 33, 0.20);
+    }
+
+    .button-primary:hover {
+      background: #4F3525;
+      transform: translateY(-3px);
+    }
+
+    .button-secondary {
+      background: #FFF8ED;
+      color: #6F4E37;
+      border: 1px solid #A98260;
+    }
+
+    .button-secondary:hover {
+      background: #EAD7BD;
+      transform: translateY(-3px);
+    }
+    
+    #experience {
+      background: #F4E5D0;
+    }
+
+    #experience strong {
+      font-size: 17px;
+    }
+
+    #contact a {
+      color: #765437;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    #contact a:hover {
+      color: #3F2A1D;
+      text-decoration: underline;
+    }
+
+    .contact-form {
+      margin-top: 22px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 13px 15px;
+      margin: 6px 0 12px;
+      border: 1px solid #D3B99B;
+      border-radius: 12px;
+      background: #FFF9F0;
+      color: #4B3621;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #9A8068;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #8C6749;
+      box-shadow: 0 0 0 3px rgba(140, 103, 73, 0.13);
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    #contact::after {
+      content: "© 2026 Neelam Chandwani";
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #DCC5A7;
+      color: #8A7058;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+     body {
+        padding: 12px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 14px;
+        position: relative;
+        top: 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      #hero {
+        padding: 45px 22px;
+      }
+
+      #hero h1 {
+        font-size: 38px;
+      }
+
+      #hero h3 {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 24px;
+      }
+
+      #projects ul {
+        grid-template-columns: 1fr;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <strong>Neelam Chandwani</strong>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <h1>Hi, I'm Neelam</h1>
+    <h3>Student at Scaler School of Technology</h3>
+    <p>
+      I love building clean, simple and creative digital experiences
+      while learning something new every day.
+    </p>
+    <div class="button1">
+      <a
+        href="#projects" class="button2 button-primary">
+        <b>View Projects</b>
+      </a>
+      <a
+        href="#contact" class="button2 button-secondary">
+        <b>Contact Me</b>
+      </a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I am Neelam Chandwani. I am a Computer Science student
+      who enjoys coding, creating projects and exploring technology.
+    </p>
+    <p>
+      Currently, I am learning programming and web development
+      while working towards becoming a better developer
+      one project at a time.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>
+        <strong>HTML</strong>
+      </li>
+      <li>
+        <strong>CSS</strong>
+      </li>
+      <li>
+        <strong>Java</strong>
+      </li>
+      <li>
+        <strong>Git & GitHub</strong>
+      </li>
+      <li>
+        <strong>C++</strong>
+      </li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <ul>
+      <li>
+        <strong>TrustLend</strong>
+        A project that helps you find a 
+        trustable community of people who are willing 
+        to lend and who needs loan, a project that makes very 
+        complex process much easier.
+      </li>
+      <li>
+        <strong>Personal Student Portfolio</strong>
+        A personalized project where I keep a track of myself.
+      </li>
+  </section>
+
+  <section id="experience">
+    <h2>Education</h2>
+    <p>
+      <strong>Computer Science</strong>
+    </p>
+    <p>
+      Scaler School of Technology
+      <br>
+      2026 – 2030
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Let's Connect</h2>
+    <p>
+      Email:
+      <a href="mailto:neelam.26bcs10554@sst.scaler.com">
+        neelam.26bcs10554@sst.scaler.com
+      </a>
+    </p>
+    <p>
+      GitHub:
+      <a href="https://github.com/neelam2007" target="_blank">
+        neelam2007
+      </a>
+    </p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4"placeholder="Your Message"required></textarea>
+      <button type="submit" class="button2 button-primary">
+        <b>Send Message</b>
+      </button>
+    </form>
+  </section>
+</body>
+</html>
